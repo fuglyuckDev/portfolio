@@ -1,0 +1,61 @@
+@import "/app/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 300px;
+
+  & > :nth-child(1) {
+    margin-bottom: 50px;
+    text-align: center;
+    & > h2 {
+      color: $app__accent;
+    }
+    & > p {
+      opacity: 60%;
+    }
+  }
+}
+
+.projects__container,
+.projects__container__flipped {
+  display: flex;
+  width: 80%;
+  align-self: center;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.projects__container {
+  flex-direction: row;
+}
+.projects__container__flipped {
+  flex-direction: row-reverse;
+}
+
+.card__container {
+  display: contents;
+}
+
+.project__title {
+  color: $app__accent;
+}
+
+.project__decoration {
+  width: 10%;
+  align-self: center;
+  border: 1px solid $app__accent;
+  opacity: 60%;
+}
+
+.project__details {
+  width: 20%;
+  align-self: center;
+  & > h3 {
+    margin: 0 0 20px 0;
+    opacity: 60%;
+  }
+  & > h2 {
+    margin: none;
+  }
+}

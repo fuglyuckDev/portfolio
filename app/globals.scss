@@ -1,0 +1,52 @@
+@import "/app/styles/_variables.scss";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/public/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+html {
+  height: 100%;
+  background-color: $app__background__main;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: $app__font;
+  color: $app__font__default;
+  transition: 0.5s;
+}
+
+h1,
+h2,
+p {
+  margin: 0px;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 70px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

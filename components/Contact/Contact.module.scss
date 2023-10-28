@@ -1,0 +1,84 @@
+@import "/app/styles/_variables.scss";
+
+.dialog {
+  background: none;
+  border: none;
+  width: 600px;
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      & > label {
+        color: white;
+        font-weight: 500;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+      & > input,
+      textarea {
+        background: rgb(2, 2, 2);
+        border: 1px solid $app__accent;
+        border-radius: 10px;
+        height: 30px;
+        margin-bottom: 30px;
+        width: 80%;
+      }
+      & > textarea {
+        height: 300px;
+        resize: none;
+      }
+    }
+  }
+}
+
+.contact__Form__Container,
+.contact__Form__Button__Container {
+  display: flex;
+  flex-direction: column;
+
+  &.contact__Form__Button__Container {
+    width: 90%;
+    justify-content: space-between;
+    justify-self: flex-end;
+  }
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.button__hire,
+.send__button,
+.close__button {
+  color: $app__accent;
+  width: 150px;
+  margin-top: 20px;
+  background-color: none;
+  background: none;
+  border: 1px solid $app__accent;
+  font-weight: 650;
+  font-size: 20px;
+  border-radius: 25px;
+  height: 50px;
+  cursor: pointer;
+
+  &.close__button {
+    border: none;
+  }
+
+  &:hover {
+    color: $app__background__main;
+
+    &.button__hire,
+    &.send__button {
+      background-color: $app__accent;
+    }
+
+    &.close__button {
+      color: $app__font__dark;
+    }
+  }
+}

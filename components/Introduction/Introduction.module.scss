@@ -1,0 +1,30 @@
+@import "/app/styles/_variables.scss";
+
+.title__Container {
+  margin-top: 45vh;
+  margin-left: 150px;
+  animation: 1s ease-in-out slide__in__fade;
+}
+
+@keyframes slide__in__fade {
+  0% {
+    transform: translate(-100px);
+    opacity: 0%;
+  }
+  100% {
+  }
+}
+
+.title__H1 {
+  margin-top: 20px;
+}
+
+.title__H2 {
+  color: $app__accent;
+  margin-top: 20px;
+}
+
+.description__alt {
+  opacity: 60%;
+  margin-top: 5px;
+}

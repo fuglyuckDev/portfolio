@@ -1,0 +1,94 @@
+@import "/app/styles/variables";
+
+.navigation__container {
+  pointer-events: none;
+  padding: 50px 50px 0px 50px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+}
+
+.logo__container,
+.navigation__container {
+  display: flex;
+  z-index: 1;
+}
+
+.logo__text__dark,
+.logo__text__bright {
+  font-size: 50px;
+  font-weight: 900;
+  color: $app__accent;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+.logo__text__bright {
+  transform: translate(-16px);
+  display: block;
+  animation: 2s ease-in-out logo__reveal;
+}
+
+@keyframes logo__reveal {
+  0% {
+    transform: translate(-40px);
+  }
+  100% {
+    transform: translate(-16px);
+  }
+}
+
+@keyframes logo__fadein {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 40%;
+  }
+}
+
+.logo__text__dark {
+  animation: 2s ease-in-out logo__fadein;
+  opacity: 40%;
+}
+
+.burger,
+.burger__spin {
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  right: 105px;
+}
+
+.burger__spin {
+  transform: rotate(90deg);
+}
+
+.cursor__circle {
+  border-radius: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(214, 158, 4, 1) 0%,
+    rgba(214, 158, 4, 0.165703781512605) 39%,
+    rgba(214, 158, 4, 0) 57%
+  );
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: 0.5s cubic-bezier(0.16, 0.96, 0.97, 0.11);
+  pointer-events: none;
+  animation: 2s ease-in-out fadein;
+  opacity: 0%;
+  z-index: -1;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+  }
+}

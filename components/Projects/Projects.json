@@ -1,0 +1,20 @@
+[
+  {
+    "imageSource": "/images/cards/louby_lou_new.png",
+    "title": "Louby Lou NEW",
+    "subTitle": "Most Recent*",
+    "description": "This is an example description, I'm just going to add a bunch of text to flesh it out a little, because why not?"
+  },
+  {
+    "imageSource": "/images/cards/louby_lou_old.png",
+    "title": "Louby Lou OLD",
+    "subTitle": "My second website*",
+    "description": "This is an example description, I'm just going to add a bunch of text to flesh it out a little, because why not?"
+  },
+  {
+    "imageSource": "/images/cards/mwb_first.png",
+    "title": "Magic Word Bracelet",
+    "subTitle": "My first website*",
+    "description": "This is an example description, I'm just going to add a bunch of text to flesh it out a little, because why not?"
+  }
+]

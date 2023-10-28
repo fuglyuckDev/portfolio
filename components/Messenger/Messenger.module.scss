@@ -1,0 +1,207 @@
+@import "/app/styles/variables";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container,
+.messenger__send__reply__container,
+.messenger__background,
+.messenger__message__container,
+.messenger__chat__area__container {
+  display: flex;
+}
+
+.messenger__background {
+  width: 412px;
+  height: 829px;
+  background-color: #fffff2;
+  border-radius: 25px;
+  outline: 10px solid black;
+  -webkit-box-shadow: 0px 0px 31px 7px #d4ffcc;
+  box-shadow: 0px 0px 31px 7px #d4ffcc;
+  flex-direction: column;
+}
+
+.messenger__chat__area__container,
+.messenger__details__container,
+.messenger__keyboard__container {
+  width: 100%;
+}
+
+.messenger__details__container {
+  height: 15%;
+  background-color: $app__background__main;
+}
+
+.messenger__send__reply__container {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.messenger__send__reply__button {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid $app__accent;
+  background: none;
+  color: $app__accent;
+  font-weight: 600;
+}
+
+.messenger__send__reply__button:hover {
+  background: $app__accent;
+  color: $app__background__main;
+}
+
+.messenger__chat__area__container {
+  height: 78%;
+  background-color: $app__background__glow;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.messenger__chat__area__container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.messenger__message__container,
+.messenger__message__container__req {
+  width: 50%;
+  flex-direction: column;
+  margin: 25px;
+}
+
+.messenger__message__container {
+  animation: getMessage 0.2s forwards;
+}
+
+.messenger__message__container__req {
+  align-self: flex-end;
+  animation-name: sentMessage;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.messenger__message {
+  background-color: $app__background__main;
+  padding: 20px;
+  border-radius: 15px 15px 15px 0px;
+  color: white;
+}
+
+.messenger__message__req {
+  background-color: $app__accent;
+  padding: 20px;
+  border-radius: 15px 15px 0px 15px;
+  color: black;
+}
+
+.messenger__message__details {
+  text-align: right;
+  width: 100%;
+  opacity: 60%;
+  & > p {
+    color: white;
+    opacity: 70%;
+  }
+}
+.messenger__message__details__req {
+  opacity: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & > p {
+    color: white;
+    opacity: 70%;
+  }
+  & > :nth-child(2) {
+    cursor: pointer;
+  }
+}
+
+.messenger__keyboard__container {
+  height: 7%;
+  animation: closeKeyboard 0.2s forwards;
+}
+
+.messenger__keyboard__container,
+.messenger__keyboard__container__open {
+  background-color: $app__background__main;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.messenger__keyboard__container__open {
+  animation: openKeyboard 0.2s forwards;
+}
+
+@keyframes openKeyboard {
+  from {
+    height: 7%;
+  }
+  to {
+    height: 15%;
+  }
+}
+
+@keyframes closeKeyboard {
+  from {
+    height: 15%;
+  }
+  to {
+    height: 7%;
+  }
+}
+
+.messenger__keyboard {
+  width: 70%;
+  border: none;
+  border-radius: 7px;
+  height: 60%;
+  margin: 0px 20px 0px 30px;
+  color: black;
+  padding-left: 25px;
+  resize: none;
+  text-align-last: left;
+  padding: 5px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+.messenger__keyboard__send {
+  width: 30px;
+  height: 30px;
+  background-color: $app__accent;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+}
+
+@keyframes sentMessage {
+  from {
+    translate: 0px 40px;
+    opacity: 0%;
+  }
+  to {
+    translate: 0px 0px;
+    opacity: 100%;
+  }
+}
+
+@keyframes getMessage {
+  from {
+    translate: 0px -40px;
+    opacity: 0%;
+  }
+  to {
+    translate: 0px 0px;
+    opacity: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+@import "/app/styles/variables";
+
+.card__container {
+  min-width: 400px;
+  min-height: 500px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  display: flex;
+}
+
+.card__element {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 800;
+  transition: 0s;
+}
+
+.card__alt {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 25px;
+  top: 110%;
+  text-align: center;
+  width: 100%;
+  color: $app__accent;
+}
+
+.card__image {
+  object-fit: cover;
+}
+
+.card__title {
+  position: relative;
+  pointer-events: none;
+  margin-top: 100%;
+  font-size: 40px;
+  color: $app__accent;
+  background-color: black;
+}
