@@ -42,7 +42,13 @@ const Card3D = ({ index, imgSrc, linksTo }) => {
         (As tilting a card 100 degrees would be a little TOO much)
       */
 
-      card__element.style = `transform: rotateY(${x}deg) rotateX(${-y}deg); transition: 0.05s`; // JS controlled CSS to perform the tilting
+      // JS controlled CSS to perform the tilting
+
+      card__element.style.setProperty(
+        "transform",
+        `rotateY(${x}deg) rotateX(${-y}deg)`
+      );
+      card__element.style.setProperty("transition", "0.05s");
 
       /*
       Notice how the y value is negative, and the values are in the "wrong" rotate property?
@@ -60,7 +66,11 @@ const Card3D = ({ index, imgSrc, linksTo }) => {
 
     card__container.onmouseleave = function () {
       // When the mouse leaves the container
-      card__element.style = `transform: rotateY(0deg) rotateX(0deg); transition: 0.8s; `;
+      card__element.style.setProperty(
+        "transform",
+        "rotateY(0deg) rotateX(0deg)"
+      );
+      card__element.style.setProperty("transition", "0.8s");
       // Reset the card's CSS properties to appear flat again
     };
   }, []);
@@ -77,7 +87,7 @@ const Card3D = ({ index, imgSrc, linksTo }) => {
         {""}
         <p className={styles.card__alt}>Click me! ↑</p>
         <Link href={linksTo}>
-          <Image style={styles.card__image} src={imgSrc} fill={true} />
+          <Image className={styles.card__image} src={imgSrc} fill={true} />
         </Link>
       </div>
     </div>
