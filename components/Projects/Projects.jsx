@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Projects.module.scss";
 import Card3D from "../Card3D";
 import Project__list from "./Projects.json";
+import Title from "../Title";
 
 const Projects = () => {
   function isInt(n) {
@@ -10,13 +11,14 @@ const Projects = () => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <h1>Projects</h1>
-        <h2>Websites • Widgets • Designs</h2>
-        <p>
-          All projects developed, designed, launched and maintained by myself.
-        </p>
-      </div>
+      <Title
+        title={"Projects"}
+        subtitle={"Websites • Widgets • Designs"}
+        description={
+          "All projects developed, designed, launched and maintained by myself."
+        }
+      />
+
       {Project__list.map((item, idx) => (
         <div
           className={
@@ -26,7 +28,7 @@ const Projects = () => {
           }
         >
           <div className={styles.card__container}>
-            <Card3D index={idx} imgSrc={item.imageSource} />
+            <Card3D index={idx} imgSrc={item.imageSource} linksTo={item.link} />
           </div>
           <div className={styles.project__decoration}></div>
           <div className={styles.project__details}>

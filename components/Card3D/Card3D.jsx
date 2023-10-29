@@ -2,8 +2,9 @@
 import React, { useEffect } from "react";
 import styles from "./Card3D.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
-const Card3D = ({ index, imgSrc }) => {
+const Card3D = ({ index, imgSrc, linksTo }) => {
   /* 
   useEffect is used as this code needs to be read AFTER rendering.
   How would the application know what "document" is before it's been rendered?
@@ -69,13 +70,15 @@ const Card3D = ({ index, imgSrc }) => {
       <div className={styles.card__element} id={`card__element__${index}`}>
         {""}
         {/* 
-        Adding the 'index' to the end of the ID allows for multiple instances of this card to be used as each instance would be unique.
-        In this case, since I'll be mapping from JSON data and returning instances of this component, using the index prop will suffice.
-        Using a random number generator COULD work but would be inefficient for this use case.
-        */}
+      Adding the 'index' to the end of the ID allows for multiple instances of this card to be used as each instance would be unique.
+      In this case, since I'll be mapping from JSON data and returning instances of this component, using the index prop will suffice.
+      Using a random number generator COULD work but would be inefficient for this use case.
+      */}
         {""}
         <p className={styles.card__alt}>Click me! ↑</p>
-        <Image style={styles.card__image} src={imgSrc} fill={true} />
+        <Link href={linksTo}>
+          <Image style={styles.card__image} src={imgSrc} fill={true} />
+        </Link>
       </div>
     </div>
   );

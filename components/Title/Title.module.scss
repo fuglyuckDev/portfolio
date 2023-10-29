@@ -1,0 +1,14 @@
+@import "/app/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  & > h2 {
+    color: $app__accent;
+  }
+  & > p {
+    opacity: 60%;
+  }
+}
