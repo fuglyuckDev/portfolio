@@ -69,8 +69,7 @@
   border-radius: 100px;
   background: radial-gradient(
     circle,
-    rgba(214, 158, 4, 1) 0%,
-    rgba(214, 158, 4, 0.165703781512605) 39%,
+    &$app__accent 0%,
     rgba(214, 158, 4, 0) 57%
   );
   width: 500px;
@@ -81,7 +80,7 @@
   transition: 0.5s cubic-bezier(0.16, 0.96, 0.97, 0.11);
   pointer-events: none;
   animation: 2s ease-in-out fadein;
-  opacity: 0%;
+  opacity: 20%;
   z-index: -1;
 }
 

@@ -12,9 +12,10 @@ const About = () => {
       <div className={styles.description__container}>
         <p>
           <span>1</span>
-          🌟 I'm a web development enthusiast who embarked on this journey back
-          in the MySpace era, exploring the digital landscape with wide-eyed
-          wonder! Fast forward to today, and I've had some amazing adventures.
+          🌟 I'm a self-taught web development enthusiast who embarked on this
+          journey back in the MySpace era, exploring the digital landscape with
+          wide-eyed wonder! Fast forward to today, and I've had some amazing
+          adventures.
         </p>
         <p>
           <span>2</span>

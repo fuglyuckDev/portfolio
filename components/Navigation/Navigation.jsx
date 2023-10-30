@@ -16,45 +16,45 @@ const Navigation = () => {
 
   return (
     <div className={styles.navigation__container}>
+      {/* <div className={styles.cursor__circle} id="cursor__circle" /> */}
       <Link href={"/"}>
         <div className={styles.logo__container}>
           <span className={styles.logo__text__dark}>H</span>
           <span className={styles.logo__text__bright}>H</span>
-          {/* <div className={styles.cursor__circle} id="cursor__circle" /> */}
         </div>
         {/* <div
-        className={styles.burger__container}
-        onClick={() => setClicked(!clicked)}
-      >
-        <svg
-          id="burger"
-          className={clicked == true ? styles.burger__spin : styles.burger}
-          xmlns="http://www.w3.org/2000/svg"
-          width="52"
-          height="42"
-          viewBox="0 0 72 72"
-          fill="none"
+          className={styles.burger__container}
+          onClick={() => setClicked(!clicked)}
         >
-          <path
-            d="M2 36H70"
-            stroke="white"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-          <path
-            d="M14.1685 2H57.8316"
-            stroke="white"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-          <path
-            d="M14.1685 70H57.8316"
-            stroke="white"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div> */}
+          <svg
+            id="burger"
+            className={clicked == true ? styles.burger__spin : styles.burger}
+            xmlns="http://www.w3.org/2000/svg"
+            width="52"
+            height="42"
+            viewBox="0 0 72 72"
+            fill="none"
+          >
+            <path
+              d="M2 36H70"
+              stroke="white"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M14.1685 2H57.8316"
+              stroke="white"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M14.1685 70H57.8316"
+              stroke="white"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div> */}
       </Link>
     </div>
   );
