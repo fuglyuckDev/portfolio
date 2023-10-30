@@ -11,9 +11,6 @@ const page = () => {
       <div style={{ height: "200px" }}>{/*"spacer"*/}</div>
       <Messenger />
       <Title />
-      <SyntaxHighlighter language="javascript" style={a11yDark}>
-        {codeString}
-      </SyntaxHighlighter>
     </main>
   );
 };

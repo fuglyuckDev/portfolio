@@ -26,6 +26,13 @@ const Projects = () => {
               ? styles.projects__container
               : styles.projects__container__flipped
           }
+          style={
+            idx + 1 === Project__list.length
+              ? {
+                  marginBottom: "150px",
+                }
+              : {}
+          }
         >
           <div className={styles.card__container}>
             <Card3D index={idx} imgSrc={item.imageSource} linksTo={item.link} />

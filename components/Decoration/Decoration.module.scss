@@ -1,10 +1,23 @@
 @import "/app/styles/variables";
 
 .decoration__container {
-  height: 40px;
-  width: 200px;
-  margin-left: 600px;
-  margin-top: 500px;
+  display: none;
+
+  @media only screen and (min-width: $tablet) {
+    display: block;
+    height: 40px;
+    width: 200px;
+    margin-left: 500px;
+    margin-top: 500px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    display: block;
+    height: 40px;
+    width: 200px;
+    margin-left: 600px;
+    margin-top: 500px;
+  }
 }
 
 .decoration__skills {

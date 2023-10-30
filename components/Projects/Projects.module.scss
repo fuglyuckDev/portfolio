@@ -27,10 +27,16 @@
 }
 
 .projects__container {
-  flex-direction: row;
+  flex-direction: column;
+  @media only screen and (min-width: $mobile) {
+    flex-direction: row;
+  }
 }
 .projects__container__flipped {
-  flex-direction: row-reverse;
+  flex-direction: column;
+  @media only screen and (min-width: $mobile) {
+    flex-direction: row-reverse;
+  }
 }
 
 .card__container {
@@ -42,14 +48,22 @@
 }
 
 .project__decoration {
-  width: 10%;
+  width: 80%;
   align-self: center;
   border: 1px solid $app__accent;
   opacity: 60%;
+  margin-top: 50px;
+
+  @media only screen and (min-width: $mobile) {
+    width: 10%;
+  }
 }
 
 .project__details {
-  width: 20%;
+  width: 80%;
+  @media only screen and (min-width: $mobile) {
+    width: 20%;
+  }
   align-self: center;
   & > h3 {
     margin: 0 0 20px 0;

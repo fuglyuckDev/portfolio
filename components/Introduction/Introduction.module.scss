@@ -1,9 +1,21 @@
 @import "/app/styles/_variables.scss";
 
 .title__Container {
-  margin-top: 45vh;
-  margin-left: 150px;
+  margin-top: 40vh;
+  margin-left: 50px;
   animation: 1s ease-in-out slide__in__fade;
+  @media only screen and (min-width: $mobile) {
+    margin-top: 45vh;
+    margin-left: 150px;
+  }
+}
+
+.title__Container,
+.description__alt {
+  font-size: 12px;
+  @media only screen and (min-width: $mobile) {
+    font-size: 16px;
+  }
 }
 
 @keyframes slide__in__fade {

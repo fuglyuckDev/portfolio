@@ -87,7 +87,12 @@ const Card3D = ({ index, imgSrc, linksTo }) => {
         {""}
         <p className={styles.card__alt}>Click me! ↑</p>
         <Link href={linksTo}>
-          <Image className={styles.card__image} src={imgSrc} fill={true} />
+          <Image
+            className={styles.card__image}
+            src={imgSrc}
+            width={400}
+            height={500}
+          />
         </Link>
       </div>
     </div>

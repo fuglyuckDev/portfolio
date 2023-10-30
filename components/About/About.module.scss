@@ -7,7 +7,12 @@
 }
 
 .title__container {
-  margin-left: 150px;
+  margin-left: 50px;
+
+  @media only screen and (min-width: $mobile) {
+    margin-left: 150px;
+  }
+
   & > h2 {
     color: $app__accent;
   }
@@ -18,7 +23,7 @@
 }
 
 .description__container {
-  padding: 0px 130px 0px 130px;
+  padding: 0px 50px 0px 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -26,12 +31,14 @@
   justify-items: center;
   align-items: center;
 
+  @media only screen and (min-width: $mobile) {
+    padding: 0px 130px 0px 130px;
+  }
+
   & > p {
-    font-size: 16px;
     margin-top: 40px;
     width: 400px;
     padding: 20px;
-    border-radius: 7px;
     & > span {
       font-size: 35px;
       font-weight: 800;
