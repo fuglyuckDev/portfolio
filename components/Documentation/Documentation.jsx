@@ -45,7 +45,7 @@ const Documentation = ({
         <SyntaxHighlighter
           language="javascript"
           style={a11yDark}
-          customStyle={{ width: "68%" }}
+          customStyle={{ maxWidth: "90%" }}
         >
           {codeSnippet}
         </SyntaxHighlighter>
@@ -55,7 +55,7 @@ const Documentation = ({
         <SyntaxHighlighter
           language="scss"
           style={a11yDark}
-          customStyle={{ width: "68%" }}
+          customStyle={{ maxWidth: "90%" }}
         >
           {cssSnippet}
         </SyntaxHighlighter>
