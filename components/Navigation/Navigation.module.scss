@@ -1,7 +1,7 @@
 @import "/app/styles/variables";
 
 .navigation__container {
-  pointer-events: none;
+  pointer-events: visible;
   padding: 50px 50px 0px 50px;
   justify-content: space-between;
   position: fixed;

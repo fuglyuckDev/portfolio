@@ -402,6 +402,40 @@ export default Card;
           };
         }`}
       />
+      <Documentation
+        title={"SILO, Dynamic Page Generation & SEO"}
+        imgSrc={"/images/lbl_silo.webp"}
+        description={[
+          "Since the client covers a wide range of areas within the North West of the UK, implementing a page for those individual towns to leverage SEO regularly (Creating a unique page for each town) would have been a massive, time consuming process which would have caused me to miss the deadline the client set out for me. To circumvent this, I decided to take a generative approach when it came to each page. ",
+          "First, I created a large JSON file (locations.json) filed with each county and their respective towns.",
+          "Secondly, I created a [locations].js file which signifies to NextJS that this page file will be dynamic.",
+          "Then, I used getStaticPaths(); to read through the locations.json file, find the slugs for each dynamic page.",
+          "I then added getStaticProps(); to get the town / county name used to generate the slug to fill the content on the page dynamically.",
+          "This approach allowed me to easily create an SEO profile for each page which would then be read by the SEO bot and hopefully appear in more searches that the Client's demographic in those areas would search for. To allow the SEO bot to notice this page, I had to install the npm package 'next-sitemap'; This would, once configured properly, build a sitemap post nextjs build phase. Giving this sitemap to googles URL inspector allowed each page to be read and understood much faster than without a sitemap. Since the sitemap is generated at build time, any time a new area is added to the locations.json file, it's own page is generated and added to the sitemap for the URL inspector to notice rapidly. Faster generation and faster SEO! I love Dynamic Page Generation.",
+        ]}
+        codeSnippet={`/* Does what is says on the tin, gets static paths, this will be the slug
+        that it gets from the dataset in the locations.json file */
+        export async function getStaticPaths() {
+          const paths = await locations;
+          return {
+            paths,
+            fallback: false,
+          };
+        }
+        
+        /* This basically gets the data from the static path above (Notice params), 
+        then returns that data as a prop to be used in the page's export component*/
+        export async function getStaticProps({ params }) {
+          const location = await params.location;
+          const pageData = await homeData;
+          return {
+            props: {
+              location,
+              pageData,
+            },
+          };
+        }`}
+      />
     </main>
   );
 };

@@ -4,20 +4,20 @@
     "link": "/louby-lou",
     "title": "Louby Lou NEW",
     "subTitle": "Most Recent*",
-    "description": "This is an example description, I'm just going to add a bunch of text to flesh it out a little, because why not?"
+    "description": "My most recent commercial project! Given a short time-frame for just one person (1 Month - Part time), I put everything I've learned into this project. Click the card to have a peek behind the scenes!"
   },
   {
     "imageSource": "/images/cards/louby_lou_old.png",
-    "link": "/louby-lou",
+    "link": "https://louby-lou-new-development.vercel.app/",
     "title": "Louby Lou OLD",
     "subTitle": "My second website*",
-    "description": "This is an example description, I'm just going to add a bunch of text to flesh it out a little, because why not?"
+    "description": "This project is not yet documented, if you'd like to see the website prior to documentation click the card!"
   },
   {
     "imageSource": "/images/cards/mwb_first.png",
-    "link": "/louby-lou",
+    "link": "https://www.magicwordbracelet.co.uk/",
     "title": "Magic Word Bracelet",
     "subTitle": "My first website*",
-    "description": "This is an example description, I'm just going to add a bunch of text to flesh it out a little, because why not?"
+    "description": "This project is not yet documented, if you'd like to see the website prior to documentation click the card!"
   }
 ]

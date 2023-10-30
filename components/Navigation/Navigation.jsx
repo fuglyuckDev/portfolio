@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
+import Link from "next/link";
 
 const Navigation = () => {
   // const [clicked, setClicked] = useState(false);
@@ -15,12 +16,13 @@ const Navigation = () => {
 
   return (
     <div className={styles.navigation__container}>
-      <div className={styles.logo__container}>
-        <span className={styles.logo__text__dark}>H</span>
-        <span className={styles.logo__text__bright}>H</span>
-        {/* <div className={styles.cursor__circle} id="cursor__circle" /> */}
-      </div>
-      {/* <div
+      <Link href={"/"}>
+        <div className={styles.logo__container}>
+          <span className={styles.logo__text__dark}>H</span>
+          <span className={styles.logo__text__bright}>H</span>
+          {/* <div className={styles.cursor__circle} id="cursor__circle" /> */}
+        </div>
+        {/* <div
         className={styles.burger__container}
         onClick={() => setClicked(!clicked)}
       >
@@ -53,6 +55,7 @@ const Navigation = () => {
           />
         </svg>
       </div> */}
+      </Link>
     </div>
   );
 };
