@@ -19,5 +19,12 @@
     "title": "Magic Word Bracelet",
     "subTitle": "My first website*",
     "description": "This project is not yet documented, if you'd like to see the website prior to documentation click the card!"
+  },
+  {
+    "imageSource": "/images/cards/playground.webp",
+    "link": "/testing",
+    "title": "Playground",
+    "subTitle": "For funky widgets",
+    "description": "This is just an area where I make, test and play around with little widgets I make! Feel free to play yourself! You might find yourself having too much fun!"
   }
 ]
