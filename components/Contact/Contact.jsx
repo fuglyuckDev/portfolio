@@ -26,6 +26,7 @@ const Contact = () => {
       "rPVlmRtn45wWuAQVP"
     );
     console.log("sent");
+    setToggle(!toggle);
   };
 
   return (
