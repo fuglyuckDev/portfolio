@@ -4,9 +4,11 @@
   display: block;
   position: absolute;
   z-index: -1;
-  translate: 50px 480px;
+  margin-left: 50px;
+  margin-top: 480px;
 
   @media only screen and (min-width: $tablet) {
+    position: relative;
     display: block;
     height: 40px;
     width: 200px;
@@ -15,6 +17,7 @@
   }
 
   @media only screen and (min-width: $laptop) {
+    position: relative;
     display: block;
     height: 40px;
     width: 200px;
