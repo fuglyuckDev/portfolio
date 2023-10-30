@@ -1,11 +1,12 @@
 @import "/app/styles/variables";
 
 .modal {
+  top: 72%;
+  position: fixed;
   background: none;
   background-color: $app__background__main;
   width: 100vw;
   border: none;
-  position: absolute;
   margin: auto;
 
   & > div {
