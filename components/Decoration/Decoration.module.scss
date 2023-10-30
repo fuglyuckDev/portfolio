@@ -1,7 +1,11 @@
 @import "/app/styles/variables";
 
 .decoration__container {
-  display: none;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  margin-left: 50px;
+  margin-top: 500px;
 
   @media only screen and (min-width: $tablet) {
     display: block;
