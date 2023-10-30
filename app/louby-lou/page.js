@@ -320,6 +320,88 @@ export default Card;
         }
         `}
       />
+      <Documentation
+        description={[
+          "So, developing mobile first, with these variables, makes life so much easier when I want to implement break-points. Does the flex direction need reversing on tablet and above? Put in a breakpoint with $tablet with the reversed flex direction and you're one step closer to a responsive element!",
+          "So, to put the icing on the cake, I added a 'transition: 0.5s' to the whole application using the universal selector (*). Now when switching view, changing resolution or resizing the window, the website will smoothly fall into place without any jarring pop-ins!",
+        ]}
+      />
+      <Documentation
+        title={"Form Validation"}
+        videoUrl={"/videos/lbl_validation_events"}
+        description={[
+          "Making sure users put the right information into your forms is a task which can be quite easily overlooked.",
+          "As toxic as it may be, I do like to look at users as 40 year old mothers on their kindle trying to order some food from the takeaway.",
+          "My approach to this issue constitutes to that one scene from jurassic park, you know the one, something about a magic word? Anyway, having users fill a form incorrectly makes data pretty much null. Rather than trying to fix and validate any issues during data generation, why not fix it at the source?",
+          "Taking a look at the events card on the website, you'll find that you'll need: at least 1 adult, at least 1 child and that child's name confirmed before the user can even try to book a ticket. Take a look below on how using Conditional operators I managed to quickly validate the form before submission.",
+        ]}
+        codeSnippet={`// JS   
+    return
+      <button
+        type="submit"
+        className={
+          // If the number of adults = 0
+          adultCount === 0
+            ? styles.button__Greyed
+          // If the number of kids does not = the length of the names array
+            : childCount !== names.length
+            ? styles.button__Greyed
+          // If the number of kids = 0 
+            : childCount === 0
+            ? styles.button__Greyed
+            : null
+        }
+      >
+        BOOK NOW
+      </button>`}
+        cssSnippet={`
+        // CSS
+
+        .checkout__Container button {
+          background: $accent-dark;
+          color: $background-dark;
+        }
+        
+        .button__Greyed {
+          background: #858585 !important;
+          text-decoration: line-through;
+          pointer-events: none;
+        }`}
+      />
+      <Documentation
+        title={"Sanity CMS"}
+        imgSrc={"/images/lbl_sanity.webp"}
+        description={[
+          "Since my client isn't in the coding business, I had to create a user-friendly way to have them have the ability to add and remove events on the website.",
+          "Originally I thought about making my own login system with authentication, expressjs and mongoDB. However, for speed and ease I landed on sanity studio.",
+          "Installation was VERY easy, from what I remember, all I had to do was install an npm package, create an env file for the key & secret and reference them in 'sanity.cli.js'.",
+          "The part which took the most time was implementing the output of the CMS into the website. To accomplish this, I simply initiated the Sanity client first, then used the Hook 'getServerSideProps();' to grab the data I need from Sanity. Then I plugged the output of the getSSP() into my page export function via props to work with from there. I used getServerSideProps(); as the page requires fetching the data at request time, rather than using getStaticProps();, as this would mean I would have to re-build the project each time I wanted to update the data.",
+        ]}
+        codeSnippet={`import { createClient } from "next-sanity";
+
+        // Create a client instance to use on the page:
+        const client = createClient({
+          projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+          dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+          apiVersion: "2023-08-01",
+          useCdn: false,
+        });
+        
+        export async function getServerSideProps() {
+          const eventSanityData = await client.fetch(\` *
+          [_type == "events"]\`);
+          const eventSanityImage = await client.fetch(
+            \` *
+          [_type == "sanity.imageAsset"]\`
+          );
+          return {
+            props: {
+              eventSanityData,
+              eventSanityImage,
+            },
+          };
+        }`}
+      />
     </main>
   );
 };
