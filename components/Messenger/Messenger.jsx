@@ -55,8 +55,14 @@ const Graph = () => {
     );
   };
 
-  // Use this code on client side, only when "window" does not = "undefined" as this is client-side code.
-  if (typeof window !== "undefined") {
+  {
+    /*Originally I was using if(typof window != undefined), however this was returning errors as during routing, 
+    it was throwing a typerror "Cannot read properties of null (reading 'addEventListener')". 
+    I'm assuming this is because this portion of code SHOULD be read before render, 
+    yet the other solution handles this code AFTER render.*/
+  }
+
+  useEffect(() => {
     // When client sends message via the send button, clear the value of the text-field "keyboard"
     document
       .getElementById("send")
@@ -85,7 +91,7 @@ const Graph = () => {
     document.getElementById("keyboard").addEventListener("focusout", () => {
       setKeyboardFocused(false);
     });
-  }
+  }, []);
 
   // deletes a message based on it's index within the chat array, then toggles the toggle state to update the UI (I still hate this)
   const deleteMessage = (index) => {
