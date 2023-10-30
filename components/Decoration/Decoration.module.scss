@@ -4,8 +4,7 @@
   display: block;
   position: absolute;
   z-index: -1;
-  margin-left: 50px;
-  margin-top: 500px;
+  translate: 50px 480px;
 
   @media only screen and (min-width: $tablet) {
     display: block;
