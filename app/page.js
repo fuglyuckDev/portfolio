@@ -18,7 +18,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/images/metadata/portfolio_og.webp"
+          content="https://harrison-walton-portfolio-fuglyuckdev.vercel.app/images/metadata/portfolio_og.webp"
         />
       </Head>
       <Introduction />
