@@ -20,6 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
+        <title>{metadata[0].content}</title>
+        <meta
+          name={metadata[1].type}
+          key={metadata[1].type}
+          content={metadata[1].content}
+        />
         {metadata.map((item, idx) => (
           <meta property={item.type} content={item.content}></meta>
         ))}
