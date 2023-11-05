@@ -1,0 +1,23 @@
+@import "/app/styles/variables";
+
+.custom__cursor__container {
+  position: absolute;
+  overflow: visible;
+  transition: 0.03s;
+}
+
+.custom__cursor,
+.custom__cursor__container {
+  pointer-events: none;
+}
+
+.custom__cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 40px;
+  border: 2px solid gray;
+  transition: 0.1s;
+}
