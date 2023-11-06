@@ -1,0 +1,15 @@
+@import "/app/styles/variables";
+
+.container,
+.container__Is__Last {
+  width: 80%;
+  margin-top: $app__accent 1px solid;
+  display: flex;
+  flex-direction: column;
+  border-top: $app__accent 1px solid;
+  margin-bottom: 100px;
+}
+
+.container__Is__Last {
+  margin-bottom: 900px;
+}

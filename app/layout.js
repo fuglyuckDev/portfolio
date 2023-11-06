@@ -1,3 +1,4 @@
+import CursorArt from "@/components/CursorArt";
 import styles from "./globals.scss";
 import Navigation from "@/components/Navigation/Navigation";
 
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <CursorArt />
         <Navigation />
         {children}
       </body>
