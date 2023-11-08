@@ -17,8 +17,6 @@ const TableOfContents = () => {
     const contentsContainer = document.getElementById("contents__container");
 
     contentsContainer.addEventListener("scroll", () => {
-      console.log(contentsContainer.scrollTop);
-
       for (const [idx, item] of skills.entries()) {
         let element = document.getElementById(`${item.skill}_${idx}_contents`);
 

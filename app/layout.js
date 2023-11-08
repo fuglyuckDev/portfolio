@@ -1,6 +1,15 @@
 import CursorArt from "@/components/CursorArt";
 import styles from "./globals.scss";
 import Navigation from "@/components/Navigation/Navigation";
+import rehypeHighlight from "rehype-highlight";
+import "./styles/github-dark.css";
+
+const options = {
+  mdxOptions: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeHighlight],
+  },
+};
 
 export const metadata = {
   title: "Harrison Walton - Front End Portfolio",

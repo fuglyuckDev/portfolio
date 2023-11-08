@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   @media only screen and (min-width: $mobile) {
     width: 70%;
   }
@@ -31,6 +30,6 @@
 .documentation__image,
 .documentation__video {
   margin-bottom: 50px;
-  width: 90%;
+  width: 100%;
   height: auto;
 }

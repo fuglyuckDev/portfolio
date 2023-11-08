@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Contents.module.scss";
+import MDXTest from "@/components/MDX/MDXTest.mdx";
 
 const Contents = ({ skill, skillDescription, nestedId, isLast }) => {
   return (
@@ -7,8 +8,7 @@ const Contents = ({ skill, skillDescription, nestedId, isLast }) => {
       className={isLast != true ? styles.container : styles.container__Is__Last}
       id={nestedId}
     >
-      <h3>{skill}</h3>
-      <p>{skillDescription}</p>
+      <MDXTest title={skill} emphasis={"GANG"} description={skillDescription} />
     </div>
   );
 };
