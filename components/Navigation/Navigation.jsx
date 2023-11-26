@@ -56,6 +56,14 @@ const Navigation = () => {
           </svg>
         </div> */}
       </Link>
+      <Link href={"https://github.com/fuglyuckDev"}>
+        <div
+          style={{
+            width: "64px",
+            height: "64px",
+            backgroundImage: "url('/github__logo.svg')",
+          }}></div>
+      </Link>
     </div>
   );
 };

@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <main>
       <Introduction />
-      <About />
       <Projects />
+      <About />
       <ViewCheck />
     </main>
   );

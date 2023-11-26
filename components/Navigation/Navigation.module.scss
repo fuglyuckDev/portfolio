@@ -5,7 +5,17 @@
   padding: 50px 50px 0px 50px;
   justify-content: space-between;
   position: fixed;
-  width: 100vw;
+  width: 80%;
+  @media only screen and (min-width: $mobile) {
+    width: 90%;
+  }
+}
+
+.github__logo {
+  width: "64px";
+  height: "64px";
+  background-image: url("/public/github__logo.svg");
+  background-size: contain;
 }
 
 .logo__container,

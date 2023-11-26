@@ -319,7 +319,6 @@ return;
 <br />
 
 ```scss
-
         // CSS
 
         .checkout__Container button {
@@ -331,7 +330,6 @@ return;
           background: #858585 !important;
           text-decoration: line-through;
           pointer-events: none;
-
 ```
 
 <br />
@@ -361,28 +359,28 @@ The part which took the most time was implementing the output of the **CMS** int
 ```jsx
 import { createClient } from "next-sanity";
 
-        // Create a client instance to use on the page:
-        const client = createClient({
-          projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-          dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-          apiVersion: "2023-08-01",
-          useCdn: false,
-        });
+// Create a client instance to use on the page:
+const client = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  apiVersion: "2023-08-01",
+  useCdn: false,
+});
 
-        export async function getServerSideProps() {
-          const eventSanityData = await client.fetch(\` *
-          [_type == "events"]\`);
-          const eventSanityImage = await client.fetch(
-            \` *
-          [_type == "sanity.imageAsset"]\`
-          );
-          return {
-            props: {
-              eventSanityData,
-              eventSanityImage,
-            },
-          };
-        }
+export async function getServerSideProps() {
+  const eventSanityData = await client.fetch(` *
+          [_type == "events"]`);
+  const eventSanityImage = await client.fetch(
+    ` *
+          [_type == "sanity.imageAsset"]`
+  );
+  return {
+    props: {
+      eventSanityData,
+      eventSanityImage,
+    },
+  };
+}
 ```
 
 <br />
