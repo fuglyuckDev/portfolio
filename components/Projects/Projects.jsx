@@ -33,7 +33,7 @@ const Projects = () => {
                 }
               : {}
           }
-        >
+          key={idx}>
           <div className={styles.card__container}>
             <Card3D index={idx} imgSrc={item.imageSource} linksTo={item.link} />
           </div>

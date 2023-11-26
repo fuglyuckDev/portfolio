@@ -108,6 +108,7 @@
   opacity: 60%;
   & > p {
     color: white;
+    font-size: 14px !important;
     opacity: 70%;
   }
 }
@@ -117,11 +118,13 @@
   flex-direction: row;
   justify-content: space-between;
   & > p {
+    font-size: 14px !important;
     color: white;
     opacity: 70%;
   }
   & > :nth-child(2) {
     cursor: pointer;
+    text-align: right;
   }
 }
 

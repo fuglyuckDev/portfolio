@@ -3,7 +3,7 @@
     "imageSource": "/images/cards/louby_lou_new.png",
     "link": "/louby-lou",
     "title": "Louby Lou NEW",
-    "subTitle": "Most Recent*",
+    "subTitle": "Most Recent website*",
     "description": "My most recent commercial project! Given a short time-frame for just one person (1 Month - Part time), I put everything I've learned into this project. Click the card to have a peek behind the scenes!"
   },
   {
@@ -21,10 +21,38 @@
     "description": "This project is not yet documented, if you'd like to see the website prior to documentation click the card!"
   },
   {
+    "imageSource": "/images/cards/messenger.png",
+    "link": "/messenger",
+    "title": "Messenger component",
+    "subTitle": "Front-end object manipulation",
+    "description": "This project is not yet documented, if you'd like to see the component prior to documentation click the card!"
+  },
+  {
+    "imageSource": "/images/cards/newsletter-sign-up.png",
+    "link": "https://fuglyuckdev.github.io/newsletter-sign-up-with-success-message-main/",
+    "title": "Front-end Mentor",
+    "subTitle": "Newsletter Signup",
+    "description": "This project is not yet documented, if you'd like to see the component prior to documentation click the card!"
+  },
+  {
+    "imageSource": "/images/cards/order-summary.png",
+    "link": "https://fuglyuckdev.github.io/order-summary-component-main/",
+    "title": "Front-end Mentor",
+    "subTitle": "Order-Summary",
+    "description": "This project is not yet documented, if you'd like to see the component prior to documentation click the card!"
+  },
+  {
+    "imageSource": "/images/cards/qr-code-component.png",
+    "link": "https://fuglyuckdev.github.io/qr-code-component-main/",
+    "title": "Front-end Mentor",
+    "subTitle": "QR Code component",
+    "description": "This project is not yet documented, if you'd like to see the component prior to documentation click the card!"
+  },
+  {
     "imageSource": "/images/cards/playground.webp",
     "link": "/testing",
     "title": "Playground",
     "subTitle": "For funky widgets",
-    "description": "This is just an area where I make, test and play around with little widgets I make! Feel free to play yourself! You might find yourself having too much fun!"
+    "description": "This is just an area where I make, test and play around with little widgets I make! Feel free to play yourself! I'm currently working on a scrollable page element with pagination on the side, smooth scrolling and code blocks."
   }
 ]
