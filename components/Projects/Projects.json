@@ -21,6 +21,13 @@
     "description": "This project is not yet documented, if you'd like to see the website prior to documentation click the card!"
   },
   {
+    "imageSource": "/images/cards/pygame.png",
+    "link": "https://github.com/Somadevv/PygameThief",
+    "title": "Pygame Project",
+    "subTitle": "Physics Platformer",
+    "description": "This project is not yet documented, if you'd like to see the GitHub Repo click the card!"
+  },
+  {
     "imageSource": "/images/cards/messenger.png",
     "link": "/messenger",
     "title": "Messenger component",
