@@ -1,9 +1,16 @@
 [
   {
+    "imageSource": "/images/cards/mde_website.png",
+    "link": "https://www.md-education.com/",
+    "title": "MD Education",
+    "subTitle": "Currently Developing",
+    "description": "This project is not yet documented. However, click on the card to see what kind of features are being used in this website by simply using it! The Admin backend will be off limits and this will be documented soon..."
+  },
+  {
     "imageSource": "/images/cards/louby_lou_new.png",
     "link": "/louby-lou",
     "title": "Louby Lou NEW",
-    "subTitle": "Most Recent website*",
+    "subTitle": "Currently Maintaining",
     "description": "My most recent commercial project! Given a short time-frame for just one person (1 Month - Part time), I put everything I've learned into this project. Click the card to have a peek behind the scenes!"
   },
   {

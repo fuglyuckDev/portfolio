@@ -1,0 +1,64 @@
+import Documentation from "@/components/Documentation";
+import Title from "@/components/Title";
+import Link from "next/link";
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+
+<div
+  style={{
+    paddingTop: "100px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <Title
+    title={"MD Education"}
+    description={"Documentation covering notable features"}
+    subtitle={"A dive into the behind the scenes"}
+  />
+  <Link href={"https://www.md-education.com/"}>
+    Check out the live website here!
+  </Link>
+
+<div
+  style={{
+    marginTop: "20px",
+    width: "70%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "left",
+    padding: "0px 30px 0px 30px",
+    borderRadius: "25px",
+    background: "#333333",
+  }}
+>
+<br/>
+Welcome to the breakdown of the MD Education website, made for MD Education LTD.
+
+This website whas a facet of technology that I will outline in this documentation.
+
+To start, let's have a look at the stack that I'm using in this project:
+
+- Next.js **Front end**
+- Next.js **Server**
+- PostgreSQL **Database**
+- Bunny **CDN**
+- Vercel **Hosting**
+- byCrypt **Encryption**
+- SCSS & SASS **Styling**
+
+**Disclaimer** - The code for this project is quite messy, since I'm the only one working on this project with strict deadlines, I've been unable to refactor & code-review anything.
+This is something I will come back to in the future.
+
+<br />
+Rather than outlining best practices and other smaller things, let's dive right into
+the project. The first place I'd like to look at is the *registration system*. From
+my experience, working with a backend framework like **Laravel** would be a much
+more secure solution, however, this time round, I used **PostgreSQL**. This was mainly
+for speed.
+
+</div>
+
+</div>
