@@ -1,5 +1,12 @@
 [
   {
+    "imageSource": "/images/cards/kore.png",
+    "link": "https://koreclo.vercel.app/",
+    "title": "Kore - E-Commerce Website",
+    "subTitle": "Currently Developing",
+    "description": "This project is not yet documented. However, click on the card to see what kind of features are being used in this website by simply using it! The Admin backend will be off limits and this will be documented soon..."
+  },
+  {
     "imageSource": "/images/cards/mde_website.png",
     "link": "https://www.md-education.com/",
     "title": "MD Education",
