@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Contact.module.scss";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
 
 const Contact = () => {
   const [toggle, setToggle] = useState(false);
@@ -57,12 +58,12 @@ const Contact = () => {
           </div>
         </form>
       </dialog>
-      <button
+      <Link
         className={styles.button__hire}
-        onClick={() => setToggle(!toggle)}
+        href={"https://zorilla.co.uk"}
       >
         Hire Me
-      </button>
+      </Link>
     </div>
   );
 };
